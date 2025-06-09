@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONNX Model Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ONNX Model Converter</h1>
+
+        <div class="form-group">
+            <label for="model_path">Model Path or Directory:</label>
+            <input type="text" id="model_path" name="model_path" placeholder="e.g., /path/to/model.safetensors or /path/to/models_dir">
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="force_convert" name="force_convert">
+            <label for="force_convert">Force Convert (overwrite existing ONNX)</label>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="generate_aivm" name="generate_aivm">
+            <label for="generate_aivm">Generate AIVM (from Safetensors)</label>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="generate_aivmx" name="generate_aivmx">
+            <label for="generate_aivmx">Generate AIVMX (from ONNX)</label>
+        </div>
+
+        <button id="run_conversion_button">Run Conversion</button>
+
+        <h2>Output Log:</h2>
+        <pre id="output_log_area" class="log-area">Conversion logs will appear here...</pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
